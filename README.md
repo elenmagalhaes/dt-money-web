@@ -11,7 +11,6 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/elenmagalhaes/dt-money-web?color=00875F">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/elenmagalhaes/dt-money-web?color=00875F">
   <img alt="Status do Projeto" src="https://img.shields.io/badge/status-development-yellow">
-
 </p>
 
 
