@@ -10,8 +10,10 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/elenmagalhaes/dt-money-web?color=00875F">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/elenmagalhaes/dt-money-web?color=00875F">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/elenmagalhaes/dt-money-web?color=00875F">
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/elenmagalhaes/dt-money-web?color=00875F">
+  <img alt="Status do Projeto" src="https://img.shields.io/badge/status-development-yellow">
+
 </p>
+
 
 <div align="center">
   <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
