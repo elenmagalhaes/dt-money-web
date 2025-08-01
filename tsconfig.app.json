@@ -38,7 +38,13 @@
 			],
 			"pages/*": [
 				"src/pages/*"
-			]
+			],
+			"hooks/*": [
+				"src/hooks/*"
+			],
+			"contexts/*": [
+				"src/contexts/*"
+			],
 		}
 	},
 	"include": [

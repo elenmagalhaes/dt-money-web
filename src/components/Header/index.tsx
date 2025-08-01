@@ -10,7 +10,6 @@ const Header = () => {
 				<img src={logo} alt="Logo" />
 
 				<Dialog.Root>
-
 					<Dialog.Trigger asChild>
 						<NewTransactionButton>Nova transação</NewTransactionButton>
 					</Dialog.Trigger>
