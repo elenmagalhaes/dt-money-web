@@ -1,44 +1,60 @@
 {
-	"transactions": [
-		{
-			"id": "1",
-			"description": "Desenvolvimento de site",
-			"price": 14000,
-			"category": "Venda",
-			"type": "income",
-			"createdAt": "2025-01-01T00:00:00Z"
-		},
-		{
-			"id": "2",
-			"description": "Lanche",
-			"price": 50,
-			"category": "Alimentação",
-			"type": "outcome",
-			"createdAt": "2025-02-01T00:00:00Z"
-		},
-		{
-			"id": "3",
-			"description": "Aluguel",
-			"price": 1200,
-			"category": "Moradia",
-			"type": "outcome",
-			"createdAt": "2025-02-05T00:00:00Z"
-		},
-		{
-			"id": "4",
-			"description": "Venda de carro",
-			"price": 30000,
-			"category": "Venda",
-			"type": "income",
-			"createdAt": "2025-03-01T00:00:00Z"
-		},
-		{
-			"id": "5",
-			"description": "Curso de programação",
-			"price": 2000,
-			"category": "Educação",
-			"type": "outcome",
-			"createdAt": "2025-03-10T00:00:00Z"
-		}
-	]
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Desenvolvimento de site",
+      "price": 14000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "2",
+      "description": "Lanche",
+      "price": 50,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2025-02-01T00:00:00Z"
+    },
+    {
+      "id": "3",
+      "description": "Aluguel",
+      "price": 1200,
+      "category": "Moradia",
+      "type": "outcome",
+      "createdAt": "2025-02-05T00:00:00Z"
+    },
+    {
+      "id": "4",
+      "description": "Venda de carro",
+      "price": 30000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2025-03-01T00:00:00Z"
+    },
+    {
+      "id": "5",
+      "description": "Curso de programação",
+      "price": 2000,
+      "category": "Educação",
+      "type": "outcome",
+      "createdAt": "2025-03-10T00:00:00Z"
+    },
+    {
+      "description": "Luz",
+      "price": 200,
+      "category": "Casa",
+      "type": "outcome",
+      "createdAt": "2025-08-02T01:58:34.866Z",
+      "id": "ipZQM2j"
+    },
+    {
+      "description": "Água",
+      "price": 100,
+      "category": "Casa",
+      "type": "outcome",
+      "createdAt": "2025-08-02T02:09:20.725Z",
+      "id": "WEQNwPK"
+    }
+  ]
 }
