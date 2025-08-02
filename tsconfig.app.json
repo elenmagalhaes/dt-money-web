@@ -33,21 +33,21 @@
 			"components/*": [
 				"src/components/*"
 			],
-			"styles/*": [
-				"src/styles/*"
-			],
-			"pages/*": [
-				"src/pages/*"
+			"contexts/*": [
+				"src/contexts/*"
 			],
 			"hooks/*": [
 				"src/hooks/*"
 			],
-			"contexts/*": [
-				"src/contexts/*"
+			"pages/*": [
+				"src/pages/*"
+			],
+			"styles/*": [
+				"src/styles/*"
 			],
 			"utils/*": [
 				"src/utils/*"
-			]
+			],
 		}
 	},
 	"include": [
