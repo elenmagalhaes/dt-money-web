@@ -28,17 +28,7 @@
 
 O **DT Money** é uma aplicação de controle financeiro pessoal desenvolvida com React e TypeScript, onde você pode gerenciar suas transações financeiras, acompanhar entradas e saídas, e ter um resumo completo do seu saldo. O projeto utiliza Styled Components para estilização e Radix UI para componentes acessíveis.
 
-**Status atual:** Funcionalidades principais implementadas - Dashboard com resumo financeiro, listagem de transações e modal para cadastro de novas transações.
-
-### 📈 Últimas atualizações
-
-- ✅ **Dashboard completo** - Resumo com entradas, saídas e total geral
-- ✅ **Listagem de transações** - Visualização de todas as transações com destaque por tipo
-- ✅ **Modal de nova transação** - Formulário para cadastro de transações
-- ✅ **Interface responsiva** - Design adaptativo usando Styled Components
-- ✅ **Sistema de busca** - Campo de busca para filtrar transações
-- ✅ **Configuração de código** - ESLint configurado para manter qualidade do código
-- ✅ **Paths absolutos** - Configuração de imports absolutos para melhor organização
+**Status atual:** Aplicação funcionalmente completa com API integrada, validação de formulários e sistema de gerenciamento de estado implementados.
 
 ## 🎨 Layout
 
@@ -48,10 +38,24 @@ O layout da aplicação foi baseado no design disponível no Figma:
   <img alt="Made by Rocketseat" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361?color=00875F">
 </a>
 
-<!-- ### 📱 Preview
+## 📱 Preview
 
-![Preview Home Desktop](.github/preview-home.png)
-![Preview Modal Desktop](.github/preview-modal.png) -->
+<div align="center">
+  <img alt="Preview Home Desktop" src=".github/preview-home.png" width="800" />
+  <img alt="Preview Modal Desktop" src=".github/preview-modal.png" width="800" />
+</div>
+
+### 📈 Últimas atualizações
+
+- ✅ **Integração com API** - Axios configurado para comunicação com JSON Server
+- ✅ **Context API implementado** - TransactionsContext para gerenciamento global de estado
+- ✅ **Validação de formulários** - React Hook Form + Zod para validação robusta
+- ✅ **Hook customizado** - useSummary para cálculos financeiros
+- ✅ **CRUD completo** - Criação e listagem de transações com API
+- ✅ **Sistema de busca funcional** - Filtro integrado com backend
+- ✅ **Formatação de valores** - Utilitários para formatação de moeda
+- ✅ **Lint configurado** - ESLint com configuração Rocketseat
+- ✅ **Seleção de tipo** - Controller para seleção de entrada/saída
 
 ## 🚀 Tecnologias
 
@@ -64,6 +68,10 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Phosphor Icons](https://phosphoricons.com/) - Biblioteca de ícones
 - [Vite](https://vitejs.dev/) - Build tool e dev server
 - [ESLint](https://eslint.org/) - Ferramenta de linting para código
+- [Axios](https://axios-http.com/) - Cliente HTTP para requisições à API
+- [React Hook Form](https://react-hook-form.com/) - Biblioteca para gerenciamento de formulários
+- [Zod](https://zod.dev/) - Schema validation com TypeScript
+- [JSON Server](https://github.com/typicode/json-server) - API REST fake para desenvolvimento
 
 ## 📁 Estrutura do Projeto
 
@@ -83,6 +91,13 @@ src/
 │   └── NewTransactionModal/ # Modal para cadastro de transações
 │       ├── index.tsx
 │       └── styles.ts
+├── contexts/         # Contextos React para gerenciamento de estado
+│   └── TransactionsContext.tsx # Context para transações
+├── hooks/            # Hooks customizados
+│   └── useSummary/   # Hook para cálculos do resumo financeiro
+│       └── index.tsx
+├── lib/              # Configurações de bibliotecas externas
+│   └── axios.ts      # Configuração do cliente HTTP
 ├── pages/            # Páginas da aplicação
 │   └── Transactions/ # Página principal com transações
 │       ├── index.tsx
@@ -93,6 +108,8 @@ src/
 │   ├── global.ts     # Estilos globais
 │   └── themes/
 │       └── default.ts # Tema padrão da aplicação
+├── utils/            # Funções utilitárias
+│   └── formatter.ts  # Formatação de valores e datas
 ├── App.tsx           # Componente principal
 └── main.tsx          # Ponto de entrada da aplicação
 ```
@@ -101,32 +118,41 @@ src/
 
 ### ✅ Implementadas
 
-- **Dashboard financeiro** - Visualização de entradas, saídas e saldo total
-- **Listagem de transações** - Tabela com todas as transações registradas
+- **Dashboard financeiro** - Visualização de entradas, saídas e saldo total com cálculos em tempo real
+- **Listagem de transações** - Tabela com todas as transações carregadas da API
 - **Destaque por tipo** - Cores diferenciadas para entradas (verde) e saídas (vermelho)
-- **Modal de cadastro** - Formulário para adicionar novas transações
+- **Modal de cadastro** - Formulário completo com validação para adicionar transações
+- **Sistema de busca funcional** - Campo para filtrar transações integrado com backend
+- **Validação robusta** - React Hook Form + Zod para validação de formulários
+- **Gerenciamento de estado** - Context API para estado global das transações
+- **Integração com API** - Comunicação completa com JSON Server via Axios
+- **Hook customizado** - useSummary para cálculos do resumo financeiro
+- **Formatação de valores** - Utilitários para formatação de moeda brasileira
 - **Interface responsiva** - Design que se adapta a diferentes tamanhos de tela
-- **Sistema de busca** - Campo para filtrar transações
 - **Tema consistente** - Sistema de cores e tipografia unificado
 - **Componentes reutilizáveis** - Header, Summary e Modal modulares
 - **Paths absolutos** - Imports limpos sem caminhos relativos complexos
+- **Configuração de lint** - ESLint com configuração Rocketseat para qualidade de código
 
-### 🧩 Componentes Principais
+### 🧩 Componentes e Arquitetura
 
 - **Header** - Cabeçalho com logo e botão para nova transação
-- **Summary** - Cards com resumo de entradas, saídas e total
-- **NewTransactionModal** - Modal com formulário de cadastro
-- **SearchForm** - Formulário de busca de transações
-- **TransactionsTable** - Tabela de listagem das transações
+- **Summary** - Cards com resumo de entradas, saídas e total (usando useSummary hook)
+- **NewTransactionModal** - Modal com formulário validado por React Hook Form + Zod
+- **SearchForm** - Formulário de busca integrado com API
+- **TransactionsTable** - Tabela de listagem das transações com formatação
+- **TransactionsContext** - Context para gerenciamento global do estado das transações
+- **useSummary** - Hook customizado para cálculos do resumo financeiro
+- **Axios API Client** - Cliente configurado para comunicação com JSON Server
 
 ### 🚧 Em desenvolvimento
 
-- **Validação de formulários** - React Hook Form para controle e validação
-- **Persistência de dados** - Integração com API ou localStorage
-- **Categorização de transações** - Sistema de categorias para organização
-- **Filtros avançados** - Filtros por data, categoria e valor
+- **Categorização avançada** - Sistema expandido de categorias para organização
+- **Filtros avançados** - Filtros por data, categoria e faixa de valor
 - **Gráficos e relatórios** - Visualizações gráficas dos dados financeiros
-- **Exportação de dados** - Funcionalidade para exportar relatórios
+- **Exportação de dados** - Funcionalidade para exportar relatórios em PDF/Excel
+- **Edição de transações** - Funcionalidade para editar transações existentes
+- **Exclusão de transações** - Funcionalidade para remover transações
 
 ### 💡 Próximas funcionalidades
 
@@ -159,26 +185,34 @@ $ npm install
 # ou
 $ yarn install
 
-# Execute a aplicação em modo de desenvolvimento
+# Inicie o servidor JSON (API fake)
+$ npm run dev:server
+# ou
+$ yarn dev:server
+
+# Em outro terminal, execute a aplicação
 $ npm run dev
 # ou
 $ yarn dev
 
-# O servidor inciará na porta:5173 - acesse http://localhost:5173
+# O servidor da API estará na porta:3000 - http://localhost:3000
+# A aplicação estará na porta:5173 - http://localhost:5173
 ```
 
-### 🏗️ Build para produção
+### 🏗️ Scripts disponíveis
 
 ```bash
-# Gerar build otimizado
-$ npm run build
-# ou
-$ yarn build
+# Desenvolvimento
+$ npm run dev          # Inicia aplicação em modo desenvolvimento
+$ npm run dev:server   # Inicia JSON Server (API fake)
 
-# Visualizar build localmente
-$ npm run preview
-# ou
-$ yarn preview
+# Build e Preview
+$ npm run build        # Gerar build otimizado para produção
+$ npm run preview      # Visualizar build localmente
+
+# Qualidade de código
+$ npm run lint         # Verificar problemas de lint
+$ npm run lint:fix     # Corrigir problemas de lint automaticamente
 ```
 
 ## 📝 Licença
