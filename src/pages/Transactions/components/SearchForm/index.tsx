@@ -1,10 +1,10 @@
-import { zodResolver } from "@hookform/resolvers/zod"
-import { TransactionsContext } from "contexts/TransactionsContext"
-import { MagnifyingGlass } from "phosphor-react"
-import { useContext } from "react"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-import { SearchFormContainer } from "./styles"
+import { zodResolver } from '@hookform/resolvers/zod'
+import { TransactionsContext } from 'contexts/TransactionsContext'
+import { MagnifyingGlass } from 'phosphor-react'
+import { useContext } from 'react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { SearchFormContainer } from './styles'
 
 const searchFormSchema = z.object({
 	query: z.string(),
@@ -32,7 +32,7 @@ const SearchForm = () => {
 			<input
 				type="text"
 				placeholder="Busque por transações"
-				{...register("query")}
+				{...register('query')}
 			/>
 
 			<button type="submit" disabled={isSubmitting}>

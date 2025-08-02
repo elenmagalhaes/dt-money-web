@@ -1,23 +1,16 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { globalIgnores } from 'eslint/config'
+import rocketseatConfig from '@rocketseat/eslint-config'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-  },
-])
+export default [
+	...rocketseatConfig,
+	{
+		rules: {
+			'@stylistic/no-tabs': 'off',
+			'@stylistic/indent': ['error', 'tab'],
+			'@stylistic/jsx-indent': ['error', 'tab'], // Permite tabs no JSX
+			'@stylistic/jsx-indent-props': ['error', 'tab'], // Permite tabs nas props JSX
+			'@stylistic/quotes': 'off', // Permite aspas simples ou duplas
+			'@stylistic/max-len': ['warn', { code: 110 }], // Aumenta limite para 110 caracteres
+			'@typescript-eslint/no-empty-object-type': 'off', // Permite interfaces vazias
+		},
+	},
+]

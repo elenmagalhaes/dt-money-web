@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components'
 
 interface PriceHighlightProps {
 	variant: 'income' | 'outcome';
@@ -9,7 +9,7 @@ export const TransactionsContainer = styled.main`
 	max-width: 1120px;
 	margin: 4rem auto 0;
 	padding: 0 1.5rem;
-`;
+`
 
 export const TransactionsTable = styled.table`
 	width: 100%;
@@ -31,9 +31,11 @@ export const TransactionsTable = styled.table`
 			border-bottom-right-radius: 6px;
 		}
 	}
-`;
+`
 
 export const PriceHighlight = styled.span<PriceHighlightProps>`
-	color: ${props => props.variant === 'income' ? props.theme['green-300'] : props.theme['red-300']};
+	color: ${props => props.variant === 'income'
+		? props.theme['green-300']
+		: props.theme['red-300']};
 	font-weight: bold;
-`;
+`

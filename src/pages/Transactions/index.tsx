@@ -1,11 +1,10 @@
-import Header from "components/Header"
-import Summary from "components/Summary"
-import { TransactionsContext } from "contexts/TransactionsContext"
-import { useContext } from "react"
-import { dateFormatter, priceFormatter } from "utils/formatter"
-import SearchForm from "./components/SearchForm"
-import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styles"
-
+import Header from 'components/Header'
+import Summary from 'components/Summary'
+import { TransactionsContext } from 'contexts/TransactionsContext'
+import { useContext } from 'react'
+import { dateFormatter, priceFormatter } from 'utils/formatter'
+import SearchForm from './components/SearchForm'
+import { PriceHighlight, TransactionsContainer, TransactionsTable } from './styles'
 
 const Transactions = () => {
 	const { transactions } = useContext(TransactionsContext)
