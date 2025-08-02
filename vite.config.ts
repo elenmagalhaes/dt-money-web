@@ -11,6 +11,7 @@ export default defineConfig({
 			"contexts": "/src/contexts",
 			"styles": "/src/styles",
 			"pages": "/src/pages",
+			"utils": "/src/utils",
 		},
 	},
 })
