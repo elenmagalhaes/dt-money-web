@@ -17,7 +17,9 @@ export const SummaryContainer = styled.section`
 	margin-top: -5rem;
 `
 
-export const SummaryCard = styled.div<SummaryCardProps>`
+export const SummaryCard = styled.div.withConfig({
+	shouldForwardProp: (prop) => prop !== 'variant'
+}) <SummaryCardProps>`
 	background: ${props => props.theme['gray-600']};
 	border-radius: 6px;
 	padding: 2rem;

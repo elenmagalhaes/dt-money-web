@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 
 interface PriceHighlightProps {
-	variant: 'income' | 'outcome';
+	variant: 'income' | 'outcome'
 }
 
 export const TransactionsContainer = styled.main`
@@ -33,7 +33,9 @@ export const TransactionsTable = styled.table`
 	}
 `
 
-export const PriceHighlight = styled.span<PriceHighlightProps>`
+export const PriceHighlight = styled.span.withConfig({
+	shouldForwardProp: (prop) => prop !== 'variant',
+})<PriceHighlightProps>`
 	color: ${props => props.variant === 'income'
 		? props.theme['green-300']
 		: props.theme['red-300']};
