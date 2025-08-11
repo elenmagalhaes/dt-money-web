@@ -3,7 +3,7 @@ import Summary from 'components/Summary'
 import { TransactionsContext } from 'contexts/TransactionsContext'
 import { useContextSelector } from 'use-context-selector'
 import { dateFormatter, priceFormatter } from 'utils/formatter'
-import SearchForm from './components/SearchForm'
+import { SearchForm } from './components/SearchForm'
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from './styles'
 
 const Transactions = () => {

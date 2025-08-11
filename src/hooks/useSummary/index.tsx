@@ -25,7 +25,6 @@ const useSummary = () => {
 				outcome: 0,
 				total: 0,
 			})
-
 	}, [transactions])
 
 	return summary
